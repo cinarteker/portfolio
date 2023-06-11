@@ -1,5 +1,7 @@
 import logo from './logo.svg';
+
 import './App.css';
+
 //testing linter
 
 function App() {
@@ -24,4 +26,3 @@ function App() {
 }
 
 export default App;
-
