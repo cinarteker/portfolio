@@ -7,18 +7,18 @@
     <img src="assets/logo.png" alt="Logo" width="150" height="150">
   </a>
 
-  <h3 align="center">AIRON Fitness</h3>
+  <h3 align="center">Davis Song</h3>
 
   <p align="center">
-    AI-powered fitness app to help you kickstart your training journey.
+    My portfolio website.
     <br />
-    <a href="https://airon-fitness.onrender.com/"><strong>View Demo »</strong></a>
+    <a href="github.com/d-x-s><strong>View Demo »</strong></a>
     <br />
   </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<!-- <details>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
@@ -39,7 +39,7 @@
     <li><a href="#connect-with-us">The Team</a></li>
     <li><a href="#license">License</a></li>
   </ol>
-</details>
+</details> -->
 
 <!-- ABOUT THE PROJECT -->
 
@@ -73,9 +73,6 @@
 - [![MongoDB][MongoDB]][MongoDB-url]
 - [![Express][Express.js]][Express-url]
 - [![Redux][Redux]][Redux-url]
-- [![OpenAI][OpenAI]][OpenAI-url]
-- [![JWT][JWT]][JWT-url]
-- [![Google][Google]][Google-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,14 +113,6 @@
 [![MIT][MIT]][MIT-url]
 <br />
 Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- EULA -->
-
-## EULA
-
-See `LEGAL.txt` for more legal information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
