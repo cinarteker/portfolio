@@ -88,7 +88,8 @@
 
 ## Connect with Me
 
-[@Davis Song](https://www.linkedin.com/in/davissong/)<br>
+[Linkedin](https://www.linkedin.com/in/davissong/)<br>
+[Github](https://github.com/d-x-s)<br>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
