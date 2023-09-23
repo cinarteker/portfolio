@@ -1,13 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Box from '@mui/material/Box';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Box
+        sx={{
+          width: 500,
+          height: 500,
+          backgroundColor: 'red',
+        }}
+      >
+        <Navbar></Navbar>
+      </Box>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
+          Hi I'm Davis!
         </p>
         <a
           className="App-link"
@@ -17,7 +29,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
