@@ -1,20 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/Navbar';
+import ResponsiveAppBar from './components/Navbar';
 import Box from '@mui/material/Box';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <Box
         sx={{
-          width: 500,
-          height: 500,
-          backgroundColor: 'red',
-        }}
-      >
-        <Navbar></Navbar>
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'purple',
+        }}>
+        <ResponsiveAppBar></ResponsiveAppBar>
+        <Outlet />
       </Box>
+
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
