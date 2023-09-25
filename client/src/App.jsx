@@ -6,33 +6,28 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <Box
+        sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+        width: '100vw',
+        backgroundColor: '#0D0D0D',
+      }}>
       <Box
         sx={{
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'purple',
+          display: 'flex',
+          flexDirection: 'column',
+          width: '1000px',
+          height: '500px',
+          backgroundColor: 'none',
         }}>
         <ResponsiveAppBar></ResponsiveAppBar>
         <Outlet />
       </Box>
+    </Box>
 
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-          Hi I'm Davis!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
   );
 }
 

@@ -1,7 +1,12 @@
+import { Box } from "@mui/material"
+import { PageStyle } from "../style/PageStyles"
+
 export default function Contact() {
     return (
-        <p>
-            Contact Page
-        </p>
+        <Box sx ={PageStyle}>
+            <p>
+                Blog Page
+            </p>
+        </Box>
     )
 }

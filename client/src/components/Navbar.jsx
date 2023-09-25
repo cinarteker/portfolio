@@ -44,10 +44,18 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" 
+      sx={{ 
+        borderTopLeftRadius: '15px', 
+        borderTopRightRadius: '15px', 
+      }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon 
+            sx={{ 
+              display: { xs: 'none', md: 'flex' }, 
+              mr: 1 }} 
+          />
           <Typography
             variant="h6"
             noWrap
@@ -66,7 +74,10 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ 
+            flexGrow: 1, 
+            display: { xs: 'flex', md: 'none' } 
+          }}>
             <IconButton
               size="large"
               aria-label="account of current user"
