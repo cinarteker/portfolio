@@ -1,5 +1,5 @@
 export const PageStyle = {
-    backgroundColor: 'red',
+        backgroundColor: '#ededed',
         height: '100%',
         width: '100%',
         borderBottomLeftRadius: '15px',

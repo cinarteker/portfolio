@@ -5,7 +5,7 @@ export default function Landing() {
     return (
         <Box sx ={PageStyle}>
             <p>
-                Blog Page
+                Landing Page
             </p>
         </Box>
     )

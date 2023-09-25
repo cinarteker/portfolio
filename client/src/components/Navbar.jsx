@@ -46,8 +46,11 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" 
       sx={{ 
+        color: '#0D0D0D',
         borderTopLeftRadius: '15px', 
         borderTopRightRadius: '15px', 
+        backgroundColor: '#ededed',
+        fontFamily: 'Montserrat',
       }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -162,7 +165,7 @@ function ResponsiveAppBar() {
                 <Link
                 style={{
                   textDecoration: 'none',
-                  color: 'red',
+                  color: 'black',
                   display: 'block',
                   my: 2,
                 }}
@@ -174,7 +177,7 @@ function ResponsiveAppBar() {
                     color: 'inherit',
                     '&:hover': {
                       color: 'red',
-                      transition: 'background-color 1.0s ease-in-out',
+                      transition: 'background-color 2.0s ease-in-out',
                     },
                   }}
                 >
