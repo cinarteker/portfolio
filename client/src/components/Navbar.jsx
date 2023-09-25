@@ -16,11 +16,11 @@ import { Link } from 'react-router-dom';
 
 // const pages = ['Products', 'Pricing', 'Blog'];
 const pages = [
-    ['LANDING', 'landing'],
+    ['ABOUT', 'about'],
     ['PROJECTS', 'projects'],
-    ['PHOTOGRAPHY', 'photography'],
+    // ['PHOTOGRAPHY', 'photography'],
     ['BLOG', 'blog'],
-    ['CONTACT', 'contact'],
+    // ['CONTACT', 'contact'],
 ]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -46,20 +46,21 @@ function ResponsiveAppBar() {
   return (
     <AppBar position="static" 
       sx={{ 
-        color: '#0D0D0D',
-        borderTopLeftRadius: '15px', 
-        borderTopRightRadius: '15px', 
-        backgroundColor: '#ededed',
-        fontFamily: 'Montserrat',
+        // color: 'white',
+        // borderTopLeftRadius: '15px', 
+        // borderTopRightRadius: '15px', 
+        backgroundColor: 'black',
+        // height: '100px',
+        paddingTop: 5,
       }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon 
+          {/* <AdbIcon 
             sx={{ 
               display: { xs: 'none', md: 'flex' }, 
               mr: 1 }} 
-          />
-          <Typography
+          /> */}
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -75,7 +76,7 @@ function ResponsiveAppBar() {
             }}
           >
             LOGO
-          </Typography>
+          </Typography> */}
 
           <Box sx={{ 
             flexGrow: 1, 
@@ -107,58 +108,10 @@ function ResponsiveAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' },
+                justifyContent: 'center',
               }}
             >
               {pages.map((page) => (
-                // <MenuItem key={page} onClick={handleCloseNavMenu}>
-                //   <Typography textAlign="center">{page}</Typography>
-                // </MenuItem>
-                <Link
-                style={{
-                  textDecoration: 'none',
-                  color: 'red',
-                  display: 'block',
-                  my: 2,
-                }}
-                to={page[1]}
-                key={page[0]}
-              >
-                <Button
-                  sx={{
-                    color: 'inherit',
-                    '&:hover': {
-                      color: 'red',
-                      transition: 'background-color 1.0s ease-in-out',
-                    },
-                  }}
-                >
-                  {page[0]}
-                </Button>
-              </Link>
-              ))}
-            </Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          {pages.map((page) => (
                 // <MenuItem key={page} onClick={handleCloseNavMenu}>
                 //   <Typography textAlign="center">{page}</Typography>
                 // </MenuItem>
@@ -176,7 +129,68 @@ function ResponsiveAppBar() {
                   sx={{
                     color: 'inherit',
                     '&:hover': {
-                      color: 'red',
+                      color: 'black',
+                      transition: 'background-color 1.0s ease-in-out',
+                    },
+                  }}
+                >
+                  {page[0]}
+                </Button>
+              </Link>
+              ))}
+            </Menu>
+          </Box>
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            LOGO
+          </Typography> */}
+          <Box sx={{ 
+            flexGrow: 1, 
+            display: { xs: 'none', md: 'flex' } ,
+            justifyContent: 'center',
+            }}>
+          {pages.map((page) => (
+                // <MenuItem key={page} onClick={handleCloseNavMenu}>
+                //   <Typography textAlign="center">{page}</Typography>
+                // </MenuItem>
+                <Link
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  display: 'block',
+                  // mx: 5,
+                  // my: 3,
+                  // padding: '10px',
+                  marginLeft: 10,
+                  marginRight: 10,
+                  // margin: 10,
+                }}
+                to={page[1]}
+                key={page[0]}
+              >
+                <Button
+                  sx={{
+                    fontFamily: 'Montserrat',
+                    fontWeight: '300',
+                    fontSize: '1rem',
+                    color: 'inherit',
+                    '&:hover': {
+                      color: 'gray',
                       transition: 'background-color 2.0s ease-in-out',
                     },
                   }}

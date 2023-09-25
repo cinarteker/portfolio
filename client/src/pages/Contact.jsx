@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <Box sx ={PageStyle}>
             <p>
-                Blog Page
+                Contact Page
             </p>
         </Box>
     )

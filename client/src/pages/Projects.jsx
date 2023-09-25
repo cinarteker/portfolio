@@ -5,7 +5,7 @@ export default function Projects() {
     return (
         <Box sx ={PageStyle}>
             <p>
-                Blog Page
+                Projects Page
             </p>
         </Box>
     )

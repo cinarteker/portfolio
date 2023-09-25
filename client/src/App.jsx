@@ -14,18 +14,10 @@ function App() {
         height: '100vh',
         width: '100vw',
         backgroundColor: '#0D0D0D',
+        flexDirection: 'column',
       }}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          width: '1000px',
-          height: '500px',
-          backgroundColor: 'none',
-        }}>
         <ResponsiveAppBar></ResponsiveAppBar>
         <Outlet />
-      </Box>
     </Box>
 
   );

@@ -5,7 +5,7 @@ export default function Photography() {
     return (
         <Box sx ={PageStyle}>
             <p>
-                Blog Page
+                Photography Page
             </p>
         </Box>
     )
