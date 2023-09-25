@@ -1,6 +1,9 @@
-import { Box, Typography } from "@mui/material"
+import { Box, Typography, IconButton, } from "@mui/material"
 import { PageStyle } from "../style/PageStyles"
 import TypewriterComponent from "typewriter-effect"
+import GitHubIcon from '@mui/icons-material/GitHub'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import EmailIcon from '@mui/icons-material/Email';
 
 export default function About() {
     return (
@@ -105,6 +108,36 @@ export default function About() {
                 </Box>
 
                 {/* {Links Selection} */}
+                <Box
+                    sx={{
+                        display: 'flex',
+                        paddingTop: '20px',
+                    }}>
+                    <IconButton sx={{paddingLeft: 0}}>
+                        <GitHubIcon
+                            sx={{
+                                fontSize: '50px',
+                                color: 'white',
+                            }} 
+                        />
+                    </IconButton>
+                    <IconButton>
+                        <EmailIcon
+                            sx={{
+                                fontSize: '50px',
+                                color: 'white',
+                            }} 
+                        />
+                    </IconButton>
+                    <IconButton>
+                        <LinkedInIcon
+                            sx={{
+                                fontSize: '50px',
+                                color: 'white',
+                            }} 
+                        />
+                    </IconButton>
+                </Box>
             </Box>
         </Box>
     )
