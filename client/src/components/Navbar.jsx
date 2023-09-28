@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 
 // const pages = ['Products', 'Pricing', 'Blog'];
 const pages = [
-    ['ABOUT', 'about'],
+    ['ABOUT', ''],
     ['PROJECTS', 'projects'],
     // ['PHOTOGRAPHY', 'photography'],
     ['BLOG', 'blog'],
