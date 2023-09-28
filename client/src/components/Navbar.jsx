@@ -44,7 +44,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" 
+    <AppBar position="sticky" 
       sx={{ 
         // color: 'white',
         // borderTopLeftRadius: '15px', 

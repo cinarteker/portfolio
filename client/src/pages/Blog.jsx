@@ -45,6 +45,7 @@ const blogEntries = [
 ];
 
 const ContainerStyle = {
+    paddingTop: '5',
     fontFamily: 'Montserrat',
     display: 'flex',
     flexDirection: 'column',
