@@ -127,14 +127,24 @@ function ResponsiveAppBar() {
               >
                 <Button
                   sx={{
+                    width: '100%',
+                    fontFamily: 'Montserrat',
+                    fontWeight: 'light',
                     color: 'inherit',
                     '&:hover': {
+                      backgroundColor: 'lightGray',
                       color: 'black',
-                      transition: 'background-color 1.0s ease-in-out',
+                      transition: 'background-color 0.5s ease-in-out',
                     },
+                    '& .text-left': {  // <--- Target the child class for text alignment
+                      textAlign: 'left',
+                      width: '100%',
+                    }
                   }}
                 >
-                  {page[0]}
+                    <div className="text-left">  {/* <-- This div wraps your text */}
+                      {page[0]}
+                    </div>
                 </Button>
               </Link>
               ))}
