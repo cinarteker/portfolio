@@ -43,7 +43,7 @@ export default function About() {
                 fontFamily: 'Montserrat',
 
                 '@media (max-width: 600px)': {
-                    fontSize: '1.5rem',
+                    fontSize: '2rem',
                     padding: '50px',
                 },
             }}
@@ -67,7 +67,7 @@ export default function About() {
                         fontFamily: 'inherit',
                         paddingRight: '1.3rem',
                         '@media (max-width: 600px)': {
-                            paddingRight: '0.4rem',
+                            paddingRight: '0.5rem',
                         },
                     }}>
                         I'm a
@@ -84,7 +84,6 @@ export default function About() {
                                     strings: [
                                     ' developer.',
                                     ' designer.',
-                                    ' photographer.',
                                     ],
                                     autoStart: true,
                                     loop: true,
@@ -104,8 +103,9 @@ export default function About() {
                         width: '80vw',
                         paddingTop: '20px',
                         '@media (max-width: 600px)': {
-                            paddingTop: '10px',
-                            fontSize: '0.5rem',
+                            paddingTop: '20px',
+                            width: '70vw',
+                            fontSize: '0.75rem',
                         },
                     }}
                 >
@@ -118,6 +118,7 @@ export default function About() {
                     >
                         Currently, I work at Tegus developing software used by equity research analysts to build bespoke financial models.
                     </Typography>
+                    <br />
                     <Typography
                         sx={{
                             fontSize: 'inherit',
@@ -135,7 +136,7 @@ export default function About() {
                         display: 'flex',
                         paddingTop: '20px',
                         '@media (max-width: 600px)': {
-                            paddingTop: '5px',
+                            paddingTop: '20px',
                         },
                         
                     }}>
