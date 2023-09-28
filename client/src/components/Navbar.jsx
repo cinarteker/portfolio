@@ -190,7 +190,7 @@ function ResponsiveAppBar() {
                     fontSize: '1rem',
                     color: 'inherit',
                     '&:hover': {
-                      color: 'gray',
+                      color: 'lightGray',
                       transition: 'background-color 2.0s ease-in-out',
                     },
                   }}

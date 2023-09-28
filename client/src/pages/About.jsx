@@ -3,9 +3,31 @@ import { PageStyle } from "../style/PageStyles"
 import TypewriterComponent from "typewriter-effect"
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import CheckIcon from '@mui/icons-material/Check';
 import EmailIcon from '@mui/icons-material/Email';
+import React, { useState } from 'react';
 
 export default function About() {
+    const [isCopied, setIsCopied] = useState(false);
+    const [fadeIn, setFadeIn] = useState(false);
+
+    const copyEmailToClipboard = () => {
+        const el = document.createElement('textarea');
+        el.value = 'davissong01@gmail.com';  // replace with your email
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    
+        setIsCopied(true);
+        setFadeIn(true);
+    
+        setTimeout(() => {
+          setIsCopied(false);
+          setFadeIn(false);
+        }, 3000);  // Reset after 2 seconds
+    };
+
     return (
         <Box sx={PageStyle}>
             {/* Hero Section */}
@@ -112,28 +134,82 @@ export default function About() {
                     sx={{
                         display: 'flex',
                         paddingTop: '20px',
+                        '@media (max-width: 600px)': {
+                            paddingTop: '5px',
+                        },
+                        
                     }}>
-                    <IconButton sx={{paddingLeft: 0}}>
+                    
+                    <IconButton 
+                        sx={{paddingLeft: 0}}
+                        href='https://github.com/d-x-s'
+                        target="_blank"
+                        rel="noopener noreferrer"    
+                    >
                         <GitHubIcon
                             sx={{
                                 fontSize: '50px',
                                 color: 'white',
+                                '&:hover': {
+                                    color: '#C3B1E1',
+                                    transition: 'background-color 2.0s ease-in-out',
+                                  },
+                                '@media (max-width: 600px)': {
+                                    fontSize: '25px',
+                                },
                             }} 
                         />
                     </IconButton>
-                    <IconButton>
-                        <EmailIcon
+                    { isCopied ? (
+                        <IconButton>
+                        <CheckIcon 
                             sx={{
+                                opacity: fadeIn ? 1 : 0,
+                                transition: 'opacity 0.5s',
                                 fontSize: '50px',
-                                color: 'white',
+                                color: 'green',
+                                '@media (max-width: 600px)': {
+                                    fontSize: '25px',
+                                },
                             }} 
                         />
                     </IconButton>
-                    <IconButton>
+                    ) : (
+                        <IconButton onClick={copyEmailToClipboard}>
+                            <EmailIcon
+                                sx={{
+                                    opacity: fadeIn ? 0 : 1,
+                                    transition: 'opacity 0.5s',
+                                    fontSize: '50px',
+                                    color: 'white',
+                                    '&:hover': {
+                                        color: '#FF6961',
+                                        transition: 'background-color 2.0s ease-in-out',
+                                    },
+                                    '@media (max-width: 600px)': {
+                                        fontSize: '25px',
+                                    },
+                                }} 
+                            />
+                        </IconButton>
+                    )}
+
+                    <IconButton
+                            href='https://www.linkedin.com/in/davissong/'
+                            target="_blank"
+                            rel="noopener noreferrer"    
+                    >
                         <LinkedInIcon
                             sx={{
                                 fontSize: '50px',
                                 color: 'white',
+                                '&:hover': {
+                                    color: '#A7C7E7',
+                                    transition: 'background-color 2.0s ease-in-out',
+                                  },
+                                '@media (max-width: 600px)': {
+                                    fontSize: '25px',
+                                },
                             }} 
                         />
                     </IconButton>
