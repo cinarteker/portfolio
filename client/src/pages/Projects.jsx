@@ -81,6 +81,7 @@ const styles = {
       display: 'flex',
       justifyContent: 'flex-start',
       width: '100%',
+      marginLeft: '-7px',
     },
     icon: {
       color: 'black',
@@ -126,7 +127,11 @@ export default function Projects() {
         return (
           <Paper sx={styles.root}>
             <Box style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <img src={projectImage} alt={title} style={styles.profilePicture} />
+              <img 
+                src={projectImage} 
+                alt={title} 
+                style={styles.profilePicture} 
+              />
             </Box>
       
             <Typography variant="h6" style={styles.title}>
