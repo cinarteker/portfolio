@@ -50,12 +50,12 @@ const ContainerStyle = {
     display: 'flex',
     flexDirection: 'column',
     overflowY: 'auto',
-    maxHeight: '1000px',
+    maxHeight: '2000px',
     gap: '20px',
     '@media (max-width: 600px)': {
     },
     '@media (max-height: 1000px)': {
-        maxHeight: '500px',
+        maxHeight: '600px',
     },
 };
 
