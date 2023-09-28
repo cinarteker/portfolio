@@ -172,8 +172,20 @@ export default function Projects() {
     
     return (
         <Box sx ={PageStyle}>
-                      <Box sx={{
-            width: '90vw', flexWrap: 'wrap', paddingTop: '1%', paddingRight: '5%', paddingLeft: '5%', paddingBottom: '5%', display: 'flex', gap: '2vw', justifyContent: 'center',
+          <Box sx={{
+            width: '90vw', 
+            flexWrap: 'wrap', 
+            paddingTop: '1%', 
+            paddingRight: '5%', 
+            paddingLeft: '5%', 
+            paddingBottom: '5%', 
+            display: 'flex', 
+            gap: '2vw', 
+            justifyContent: 'center',
+            maxHeight: '1000px',
+            '@media (max-height: 1500px)': {
+              maxHeight: '600px',
+          },
           }}
         >
             {

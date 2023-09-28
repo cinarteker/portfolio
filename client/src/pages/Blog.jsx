@@ -52,7 +52,9 @@ const ContainerStyle = {
     maxHeight: '1000px',
     gap: '20px',
     '@media (max-width: 600px)': {
-        flexDirection: 'column',
+    },
+    '@media (max-height: 1500px)': {
+        maxHeight: '600px',
     },
 };
 
