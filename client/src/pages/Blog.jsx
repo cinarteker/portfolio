@@ -7,7 +7,7 @@ const blogEntries = [
     {
         id: 1,
         title: "Kouyou no Hanashi",
-        description: "04 / 10 / 22 | Autumn Leaves Story is my winning entry for The University of British Columbia's 2022 Japanese Writing Contest.",
+        description: "04 / 10 / 22 | My winning short story for The University of British Columbia's 2022 Japanese Writing Contest.",
         content: 
         `   紅葉の話
     
@@ -30,7 +30,8 @@ const blogEntries = [
             彼が彼女にとって、人生の中で唯一のものだったので、痛みに関わらず彼女は守り続けました。
             すぐに紅葉も倒れこんでしまいました。翌日、二人の体から紅葉の焼けたドレスのような赤い苗木が生えました。
 
-            だから毎年秋、雨が降る時、紅葉と炎の思い出のために木々が赤く色づきます。`,
+            だから毎年秋、雨が降る時、紅葉と炎の思い出のために木々が赤く色づきます。
+             `,
         image: KouyouBanner,
     },
     // {
@@ -102,6 +103,7 @@ function BlogEntry({ entry }) {
             <Typography fontFamily="Montserrat" fontWeight="Light" variant="body1">
                 {/* {entry.content} */}
                 <NewlineText text={entry.content} />
+                {/* {entry.content} */}
             </Typography>
         </Box>
     );
