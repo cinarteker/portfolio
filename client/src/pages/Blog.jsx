@@ -53,8 +53,8 @@ const ContainerStyle = {
     gap: '20px',
     '@media (max-width: 600px)': {
     },
-    '@media (max-height: 1500px)': {
-        maxHeight: '600px',
+    '@media (max-height: 1000px)': {
+        maxHeight: '500px',
     },
 };
 

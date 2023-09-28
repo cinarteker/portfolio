@@ -49,41 +49,50 @@ export default function About() {
             }}
             >
                 <Typography
+                    // whiteSpace='nowrap'
+
                     sx={{
                         fontSize: 'inherit',
                         fontWeight: 'inherit',
                         fontFamily: 'inherit',
+                        // overflow: 'hidden',    // This hides overflow content
+                        // whiteSpace: 'nowrap'   // This prevents text from wrapping
                     }}>
                     Hi, I'm Davis.
                 </Typography>
                 <Box sx={{
                     display: 'flex',
+                    flexWrap: 'wrap',
                     fontSize: 'inherit',
                 }}
-                >
-                    <Typography sx={{
-                        fontSize: 'inherit',
-                        fontWeight: 'inherit',
-                        fontFamily: 'inherit',
-                        paddingRight: '1.3rem',
-                        '@media (max-width: 600px)': {
-                            paddingRight: '0.5rem',
-                        },
-                    }}>
-                        I'm a
-                    </Typography>
-                    
+                >   
+                    {/* <Box>
+                        <Typography sx={{
+                            fontSize: 'inherit',
+                            fontWeight: 'inherit',
+                            fontFamily: 'inherit',
+                            paddingRight: '1.3rem',
+                            '@media (max-width: 600px)': {
+                                paddingRight: '0.5rem',
+                            },
+                        }}>
+                            I'm a
+                        </Typography>
+                    </Box> */}
                     <Typography
                         style={{
                             fontSize: 'inherit',
                             fontWeight: 'inherit',
                             fontFamily: 'inherit',
+                            overflow: 'hidden',
                         }}>
                         <TypewriterComponent
                                 options={{
                                     strings: [
-                                    ' developer.',
-                                    ' designer.',
+                                    `I'm a developer.`,
+                                    `I'm a designer.`,
+                                    `I'm a photographer.`,
+                                    `I'm a writer.`,
                                     ],
                                     autoStart: true,
                                     loop: true,
