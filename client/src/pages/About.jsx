@@ -96,7 +96,7 @@ export default function About() {
                                     ],
                                     autoStart: true,
                                     loop: true,
-                                    delay: 100,
+                                    delay: 75,
                                     deleteSpeed: 50,
                                 }}
                             />
