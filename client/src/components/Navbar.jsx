@@ -109,6 +109,9 @@ function ResponsiveAppBar() {
               sx={{
                 display: { xs: 'block', md: 'none' },
                 justifyContent: 'center',
+                '& .MuiPaper-root': { 
+                  borderRadius: '3px',
+                  },
               }}
             >
               {pages.map((page) => (
@@ -134,7 +137,7 @@ function ResponsiveAppBar() {
                     '&:hover': {
                       backgroundColor: 'lightGray',
                       color: 'black',
-                      transition: 'background-color 0.5s ease-in-out',
+                      transition: 'background-color 0.25s ease-in-out',
                     },
                     '& .text-left': {  // <--- Target the child class for text alignment
                       textAlign: 'left',
