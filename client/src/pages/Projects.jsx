@@ -175,7 +175,7 @@ export default function Projects() {
           <Box sx={{
             width: '90vw', 
             flexWrap: 'wrap', 
-            paddingTop: '7.5%', 
+            paddingTop: '45px', 
             paddingRight: '5%', 
             paddingLeft: '5%', 
             paddingBottom: '5%', 
@@ -183,8 +183,9 @@ export default function Projects() {
             gap: '2vw', 
             justifyContent: 'center',
             maxHeight: '2000px',
+            backgroundColor: 'black',
             '@media (max-height: 1000px)': {
-              maxHeight: '750px',
+              // maxHeight: '750px',
           },
           }}
         >
