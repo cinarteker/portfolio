@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Link, Box, Typography } from "@mui/material";
 import { PageStyle } from "../style/PageStyles";
 import KouyouBanner from '../assets/kouyoubanner.jpg';
 import ElfinLakes from '../assets/elfin.png';
@@ -31,7 +31,9 @@ const blogEntries = [
             すぐに紅葉も倒れこんでしまいました。翌日、二人の体から紅葉の焼けたドレスのような赤い苗木が生えました。
 
             だから毎年秋、雨が降る時、紅葉と炎の思い出のために木々が赤く色づきます。
-             `,
+
+            ---
+            `,
         image: KouyouBanner,
     },
     // {
@@ -45,6 +47,7 @@ const blogEntries = [
 ];
 
 const ContainerStyle = {
+    backgroundColor: 'black',
     paddingTop: '5',
     fontFamily: 'Montserrat',
     display: 'flex',
@@ -52,10 +55,8 @@ const ContainerStyle = {
     overflowY: 'auto',
     maxHeight: '2000px',
     gap: '20px',
-    '@media (max-width: 600px)': {
-    },
     '@media (max-height: 1000px)': {
-        maxHeight: '600px',
+        maxHeight: '700px',
     },
 };
 
@@ -110,6 +111,30 @@ function BlogEntry({ entry }) {
                 <NewlineText text={entry.content} />
                 {/* {entry.content} */}
             </Typography>
+
+            <Box
+                sx={{
+                    display: 'flex',
+                    gap: '20px',
+                }}>
+                <Link 
+                    sx={{
+                        color: 'white',
+                    }}
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1NtzO9vq_J-gW_s0an9hCtSbERftMsEV9/view?usp=sharing">
+                    English Translation
+                </Link>
+                <Link 
+                    sx={{
+                        color: 'white',
+                    }}
+                    target="_blank"
+                    href="https://asia.ubc.ca/news/2022-japanese-language-program-writing-contest/">
+                    Journal Article
+                </Link>
+            </Box>
+
         </Box>
     );
 }
