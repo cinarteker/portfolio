@@ -100,7 +100,7 @@ export default function Projects() {
         },
         {
           title: 'x86 Compiler',
-          description: 'Functionally programmed compiler.',
+          description: 'Fun functional programming.',
           link: 'https://github.com/d-x-s/x86-compiler',
           projectImage: RacketImage,
           techStack: 'Racket, x86'
