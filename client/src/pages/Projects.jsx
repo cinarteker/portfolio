@@ -5,7 +5,7 @@ import RefryImage from '../assets/refry.png';
 import MosaicImage from '../assets/mosaic.jpg';
 import VacBaseImage from '../assets/vacbase.png';
 import AironImage from '../assets/airon.png';
-
+import RacketImage from '../assets/racket.png';
 
 const styles = {
     root: {
@@ -99,6 +99,13 @@ export default function Projects() {
           techStack: 'React.js, Node.js, Express.js'
         },
         {
+          title: 'x86 Compiler',
+          description: 'A functionally programmed compiler.',
+          link: 'https://github.com/d-x-s/x86-compiler',
+          projectImage: RacketImage,
+          techStack: 'Racket, x86'
+        },
+        {
           title: 'MOSAIC',
           description: 'Recursive image generator.',
           link: 'https://github.com/d-x-s/photo-mosaic-generator/tree/main',
@@ -118,7 +125,7 @@ export default function Projects() {
             link: 'https://github.com/d-x-s/REFRY',
             projectImage: RefryImage,
             techStack: 'React.js'
-          },
+        },
       ];
 
       function ProjectCard({
