@@ -51,7 +51,7 @@ function ResponsiveAppBar() {
         // borderTopRightRadius: '15px', 
         backgroundColor: 'black',
         // height: '100px',
-        paddingTop: 5,
+        paddingTop: '36px',
       }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>

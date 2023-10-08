@@ -52,7 +52,6 @@ const ContainerStyle = {
     fontFamily: 'Montserrat',
     display: 'flex',
     flexDirection: 'column',
-    overflowY: 'auto',
     maxHeight: '2000px',
     gap: '20px',
     '@media (max-height: 1000px)': {

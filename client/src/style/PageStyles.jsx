@@ -1,5 +1,5 @@
 export const PageStyle = {
         backgroundColor: '#000000',
-        height: '100vh',
+        height: 'calc(100vh - 100px)',
         overflowX: 'hidden',
     }
