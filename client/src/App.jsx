@@ -5,7 +5,10 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <Box>
+    <Box sx={{
+      display: 'flex',
+      flexDirection: 'column',
+    }}>
         <ResponsiveAppBar></ResponsiveAppBar>
         <Outlet />
     </Box>
