@@ -1,14 +1,15 @@
 import { Link, Box, Typography } from "@mui/material";
 import { PageStyle } from "../style/PageStyles";
 import KouyouBanner from '../assets/kouyoubanner.jpg';
+import React, { useState, useEffect } from 'react';
 
 const blogEntries = [
     {
         id: 1,
         title: "Kouyou no Hanashi",
         description: "04 / 10 / 22 | My winning short story for The University of British Columbia's 2022 Japanese Writing Contest.",
-        content: 
-        `   紅葉の話
+        content:
+            `   紅葉の話
     
             昔々、山上の木に住んでいる精霊がいました。名前は紅葉でした。彼女は葉をドレスのように纏っていて美しいですが、いつも悲しそうでした。話す人がいなかったので、だんだん寂しくなってきました。
             
@@ -72,21 +73,21 @@ const entryStyle = {
 };
 
 function NewlineText({ text }) {
-    const newText = text.split('\n').map((str, index, array) => 
-      index === array.length - 1 ? str : <>
-        {str}
-        <br />
-      </>
+    const newText = text.split('\n').map((str, index, array) =>
+        index === array.length - 1 ? str : <>
+            {str}
+            <br />
+        </>
     );
-  
+
     return <>{newText}</>;
-  }
-  
+}
+
 
 function BlogEntry({ entry }) {
     return (
         <Box sx={entryStyle}>
-            <Typography fontFamily="Montserrat" fontWeight="Light"variant="h5" gutterBottom>
+            <Typography fontFamily="Montserrat" fontWeight="Light" variant="h5" gutterBottom>
                 {entry.title}
             </Typography>
             <img src={entry.image} alt={entry.title} />
@@ -102,7 +103,7 @@ function BlogEntry({ entry }) {
                     display: 'flex',
                     gap: '20px',
                 }}>
-                <Link 
+                <Link
                     sx={{
                         color: 'white',
                     }}
@@ -110,7 +111,7 @@ function BlogEntry({ entry }) {
                     href="https://drive.google.com/file/d/1NtzO9vq_J-gW_s0an9hCtSbERftMsEV9/view?usp=sharing">
                     English Translation
                 </Link>
-                <Link 
+                <Link
                     sx={{
                         color: 'white',
                     }}
@@ -125,12 +126,25 @@ function BlogEntry({ entry }) {
 }
 
 export default function Blog() {
+    const [loaded, setLoaded] = useState(false);
+
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
+
     return (
-        <Box sx={PageStyle}>
-            <Box sx={ContainerStyle}>
-                {blogEntries.map(entry => (
-                    <BlogEntry key={entry.id} entry={entry} />
-                ))}
+        <Box
+            sx={{
+                opacity: loaded ? 1 : 0,
+                transition: 'opacity 0.5s ease-in-out',
+            }}
+        >
+            <Box sx={PageStyle}>
+                <Box sx={ContainerStyle}>
+                    {blogEntries.map(entry => (
+                        <BlogEntry key={entry.id} entry={entry} />
+                    ))}
+                </Box>
             </Box>
         </Box>
     );

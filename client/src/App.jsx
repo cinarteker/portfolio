@@ -4,8 +4,8 @@ import { Outlet } from 'react-router-dom';
 function App() {
   return (
     <>
-        <ResponsiveAppBar></ResponsiveAppBar>
-        <Outlet />
+      <ResponsiveAppBar></ResponsiveAppBar>
+      <Outlet />
     </>
   );
 }

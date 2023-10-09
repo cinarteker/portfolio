@@ -10,9 +10,9 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 
 const pages = [
-    ['ABOUT', ''],
-    ['PROJECTS', 'projects'],
-    ['BLOG', 'blog'],
+  ['ABOUT', ''],
+  ['PROJECTS', 'projects'],
+  ['BLOG', 'blog'],
 ]
 
 function ResponsiveAppBar() {
@@ -27,8 +27,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" 
-      sx={{ 
+    <AppBar position="static"
+      sx={{
         backgroundColor: 'black',
         minHeight: '100px',
         display: 'flex',
@@ -38,9 +38,9 @@ function ResponsiveAppBar() {
       }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{ 
-            flexGrow: 1, 
-            display: { xs: 'flex', md: 'none' } 
+          <Box sx={{
+            flexGrow: 1,
+            display: { xs: 'flex', md: 'none' }
           }}>
             <IconButton
               size="large"
@@ -69,54 +69,54 @@ function ResponsiveAppBar() {
               sx={{
                 display: { xs: 'block', md: 'none' },
                 justifyContent: 'center',
-                '& .MuiPaper-root': { 
+                '& .MuiPaper-root': {
                   borderRadius: '3px',
-                  },
+                },
               }}
             >
               {pages.map((page) => (
                 <Link
-                style={{
-                  textDecoration: 'none',
-                  color: 'black',
-                  display: 'block',
-                  my: 2,
-                }}
-                to={page[1]}
-                key={page[0]}
-              >
-                <Button
-                  sx={{
-                    width: '100%',
-                    fontFamily: 'Montserrat',
-                    fontWeight: 'light',
-                    color: 'inherit',
-                    '&:hover': {
-                      backgroundColor: 'lightGray',
-                      color: 'black',
-                      transition: 'background-color 0.25s ease-in-out',
-                    },
-                    '& .text-left': {
-                      textAlign: 'left',
-                      width: '100%',
-                    }
+                  style={{
+                    textDecoration: 'none',
+                    color: 'black',
+                    display: 'block',
+                    my: 2,
                   }}
+                  to={page[1]}
+                  key={page[0]}
                 >
+                  <Button
+                    sx={{
+                      width: '100%',
+                      fontFamily: 'Montserrat',
+                      fontWeight: 'light',
+                      color: 'inherit',
+                      '&:hover': {
+                        backgroundColor: 'lightGray',
+                        color: 'black',
+                        transition: 'background-color 0.25s ease-in-out',
+                      },
+                      '& .text-left': {
+                        textAlign: 'left',
+                        width: '100%',
+                      }
+                    }}
+                  >
                     <div className="text-left">
                       {page[0]}
                     </div>
-                </Button>
-              </Link>
+                  </Button>
+                </Link>
               ))}
             </Menu>
           </Box>
-          <Box sx={{ 
-            flexGrow: 1, 
-            display: { xs: 'none', md: 'flex' } ,
+          <Box sx={{
+            flexGrow: 1,
+            display: { xs: 'none', md: 'flex' },
             justifyContent: 'center',
-            }}>
-          {pages.map((page) => (
-                <Link
+          }}>
+            {pages.map((page) => (
+              <Link
                 style={{
                   textDecoration: 'none',
                   color: 'white',
@@ -142,7 +142,7 @@ function ResponsiveAppBar() {
                   {page[0]}
                 </Button>
               </Link>
-              ))}
+            ))}
           </Box>
         </Toolbar>
       </Container>
