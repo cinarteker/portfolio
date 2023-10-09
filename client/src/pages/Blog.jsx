@@ -44,11 +44,7 @@ const ContainerStyle = {
     fontFamily: 'Montserrat',
     display: 'flex',
     flexDirection: 'column',
-    maxHeight: '2000px',
     gap: '20px',
-    '@media (max-height: 1000px)': {
-        maxHeight: '700px',
-    },
 };
 
 const entryStyle = {
