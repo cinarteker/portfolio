@@ -47,7 +47,12 @@ function ResponsiveAppBar() {
     <AppBar position="static" 
       sx={{ 
         backgroundColor: 'black',
-        paddingTop: '36px',
+        // paddingTop: '36px',
+        minHeight: '100px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
