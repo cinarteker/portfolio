@@ -30,7 +30,7 @@ function ResponsiveAppBar() {
     <AppBar position="static"
       sx={{
         backgroundColor: 'black',
-        minHeight: '100px',
+        height: '100px',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
