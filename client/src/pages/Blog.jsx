@@ -36,14 +36,13 @@ const blogEntries = [
             `,
         image: KouyouBanner,
     },
-    {
-        id: 1,
-        title: "Elfin Lakes",
-        description: "07 / 08 / 22 | Beautiful alpine lakes reflect Mount Garibaldi in the background.",
-        content: "Went to Elfin Lakes again this summer— a tradition I've kept for years now. It's just something about that place; the clear waters and the calm surroundings are a nice break. Every time I go, even though it's the same spot, it feels different in subtle ways. Whether it's the way the light hits the water or the new bird calls I notice. It's a familiar but refreshing getaway.",
-        image: ElfinLakes,
-    },
-
+    // {
+    //     id: 1,
+    //     title: "Elfin Lakes",
+    //     description: "07 / 08 / 22 | Beautiful alpine lakes reflect Mount Garibaldi in the background.",
+    //     content: "Went to Elfin Lakes again this summer— a tradition I've kept for years now. It's just something about that place; the clear waters and the calm surroundings are a nice break. Every time I go, even though it's the same spot, it feels different in subtle ways. Whether it's the way the light hits the water or the new bird calls I notice. It's a familiar but refreshing getaway.",
+    //     image: ElfinLakes,
+    // },
 ];
 
 const ContainerStyle = {
@@ -68,14 +67,11 @@ const entryStyle = {
     display: 'flex',
     flexDirection: 'column',
     gap: '10px',
-    // border: '1px solid gray',
     padding: '10px',
     '@media (max-width: 600px)': {
         width: '80%',
     },
     '& img': {
-        // paddingLeft: '100%',
-        // paddingRight: '100%',
         marginLeft: 'auto',
         marginRight: 'auto',
         maxWidth: '100%',
@@ -106,11 +102,9 @@ function BlogEntry({ entry }) {
                 {entry.description}
             </Typography>
             <Typography fontFamily="Montserrat" fontWeight="Light" variant="body1">
-                {/* {entry.content} */}
                 <NewlineText text={entry.content} />
-                {/* {entry.content} */}
             </Typography>
-            
+
             <Box
                 sx={{
                     display: 'flex',

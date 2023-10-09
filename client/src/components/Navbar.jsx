@@ -3,51 +3,33 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 
-// const pages = ['Products', 'Pricing', 'Blog'];
 const pages = [
     ['ABOUT', ''],
     ['PROJECTS', 'projects'],
-    // ['PHOTOGRAPHY', 'photography'],
     ['BLOG', 'blog'],
-    // ['CONTACT', 'contact'],
 ]
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <AppBar position="static" 
       sx={{ 
         backgroundColor: 'black',
-        // paddingTop: '36px',
         minHeight: '100px',
         display: 'flex',
         flexDirection: 'column',
@@ -114,13 +96,13 @@ function ResponsiveAppBar() {
                       color: 'black',
                       transition: 'background-color 0.25s ease-in-out',
                     },
-                    '& .text-left': {  // <--- Target the child class for text alignment
+                    '& .text-left': {
                       textAlign: 'left',
                       width: '100%',
                     }
                   }}
                 >
-                    <div className="text-left">  {/* <-- This div wraps your text */}
+                    <div className="text-left">
                       {page[0]}
                     </div>
                 </Button>
