@@ -18,51 +18,13 @@ const styles = {
       color: 'white',
       backgroundColor: 'black',
       borderRadius: '10px',
+      transition: 'background-color 0.25s ease-in-out, color 0.25s ease-in-out',
       '&:hover': {
-        color: 'black',
-        backgroundColor: 'lightGray',
-        transition: 'background-color 0.35s ease-in-out',
+          color: 'black',
+          backgroundColor: 'lightGray',
       },
     },
-    featureCardPaper: {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '10px',
-      minWidth: 200,
-      minHeight: 200,
-      maxWidth: 300,
-      width: '7.5vw',
-      height: '7.5vw',
-      color: 'red',
-      backgroundColor: 'purple',
-      borderRadius: '10px',
-      '&:hover': {
-        backgroundColor: 'blue',
-        transition: 'background-color 0.35s ease',
-        cursor: 'pointer',
-      },
-    },
-    popupContent: {
-      padding: '2rem',
-      display: 'flex',
-      width: 'calc(250px + 10vw)',
-      color: 'purple',
-      backgroundColor: 'red',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-      gap: '2rem',
-      borderRadius: '10px',
-    },
-    sectionContainer: {
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    profilePicture: {
+    thumbnail: {
       width: '200px',
       height: '200px',
       borderRadius: '50%',
@@ -82,9 +44,13 @@ const styles = {
       justifyContent: 'flex-start',
       width: '100%',
       marginLeft: '-7px',
+      color: 'inherit',
+    },
+    iconButton: {
+      color: 'inherit',
     },
     icon: {
-      color: 'black',
+      color: 'inherit',
       fontSize: 20,
     },
 };
@@ -137,7 +103,7 @@ export default function Projects() {
               <img 
                 src={projectImage} 
                 alt={title} 
-                style={styles.profilePicture} 
+                style={styles.thumbnail} 
               />
             </Box>
       
@@ -160,18 +126,10 @@ export default function Projects() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
+                style={styles.iconButton}
               >
                 <LinkIcon style={styles.icon} />
               </IconButton>
-              {/* <IconButton
-                color="primary"
-                component="a"
-                href={liveDemo}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkIcon style={styles.icon} />
-              </IconButton> */}
             </div>
           </Paper>
         );
@@ -191,9 +149,6 @@ export default function Projects() {
             justifyContent: 'center',
             maxHeight: '2000px',
             backgroundColor: 'black',
-            '@media (max-height: 1000px)': {
-              // maxHeight: '750px',
-          },
           }}
         >
             {

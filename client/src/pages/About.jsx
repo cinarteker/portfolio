@@ -13,7 +13,7 @@ export default function About() {
 
     const copyEmailToClipboard = () => {
         const el = document.createElement('textarea');
-        el.value = 'davissong01@gmail.com';  // replace with your email
+        el.value = 'davissong01@gmail.com';
         document.body.appendChild(el);
         el.select();
         document.execCommand('copy');
@@ -25,7 +25,7 @@ export default function About() {
         setTimeout(() => {
           setIsCopied(false);
           setFadeIn(false);
-        }, 3000);  // Reset after 2 seconds
+        }, 3000);
     };
 
     return (
@@ -49,14 +49,10 @@ export default function About() {
             }}
             >
                 <Typography
-                    // whiteSpace='nowrap'
-
                     sx={{
                         fontSize: 'inherit',
                         fontWeight: 'inherit',
                         fontFamily: 'inherit',
-                        // overflow: 'hidden',    // This hides overflow content
-                        // whiteSpace: 'nowrap'   // This prevents text from wrapping
                     }}>
                     Hi, I'm Davis.
                 </Typography>
@@ -66,19 +62,6 @@ export default function About() {
                     fontSize: 'inherit',
                 }}
                 >   
-                    {/* <Box>
-                        <Typography sx={{
-                            fontSize: 'inherit',
-                            fontWeight: 'inherit',
-                            fontFamily: 'inherit',
-                            paddingRight: '1.3rem',
-                            '@media (max-width: 600px)': {
-                                paddingRight: '0.5rem',
-                            },
-                        }}>
-                            I'm a
-                        </Typography>
-                    </Box> */}
                     <Typography
                         style={{
                             fontSize: 'inherit',
@@ -160,10 +143,10 @@ export default function About() {
                             sx={{
                                 fontSize: '50px',
                                 color: 'white',
+                                transition: 'color 0.25s ease-in-out',
                                 '&:hover': {
                                     color: '#C3B1E1',
-                                    transition: 'background-color 2.0s ease-in-out',
-                                  },
+                                },
                                 '@media (max-width: 600px)': {
                                     fontSize: '25px',
                                 },
@@ -189,12 +172,11 @@ export default function About() {
                             <EmailIcon
                                 sx={{
                                     opacity: fadeIn ? 0 : 1,
-                                    transition: 'opacity 0.5s',
                                     fontSize: '50px',
                                     color: 'white',
+                                    transition: 'color 0.25s ease-in-out',
                                     '&:hover': {
                                         color: '#FF6961',
-                                        transition: 'background-color 2.0s ease-in-out',
                                     },
                                     '@media (max-width: 600px)': {
                                         fontSize: '25px',
@@ -213,10 +195,10 @@ export default function About() {
                             sx={{
                                 fontSize: '50px',
                                 color: 'white',
+                                transition: 'color 0.25s ease-in-out',
                                 '&:hover': {
                                     color: '#A7C7E7',
-                                    transition: 'background-color 2.0s ease-in-out',
-                                  },
+                                },
                                 '@media (max-width: 600px)': {
                                     fontSize: '25px',
                                 },
