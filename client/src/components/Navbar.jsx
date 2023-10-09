@@ -1,19 +1,19 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const pages = [
-  ['ABOUT', ''],
-  ['PROJECTS', 'projects'],
-  ['BLOG', 'blog'],
-]
+  ["ABOUT", ""],
+  ["PROJECTS", "projects"],
+  ["BLOG", "blog"],
+];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -27,21 +27,25 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="fixed"
+    <AppBar
+      position="fixed"
       sx={{
-        backgroundColor: 'black',
-        height: '100px',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
+        backgroundColor: "black",
+        height: "100px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box sx={{
-            flexGrow: 1,
-            display: { xs: 'flex', md: 'none' }
-          }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -56,30 +60,30 @@ function ResponsiveAppBar() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
+                vertical: "bottom",
+                horizontal: "left",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
+                vertical: "top",
+                horizontal: "left",
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: 'block', md: 'none' },
-                justifyContent: 'center',
-                '& .MuiPaper-root': {
-                  borderRadius: '3px',
+                display: { xs: "block", md: "none" },
+                justifyContent: "center",
+                "& .MuiPaper-root": {
+                  borderRadius: "3px",
                 },
               }}
             >
               {pages.map((page) => (
                 <Link
                   style={{
-                    textDecoration: 'none',
-                    color: 'black',
-                    display: 'block',
+                    textDecoration: "none",
+                    color: "black",
+                    display: "block",
                     my: 2,
                   }}
                   to={page[1]}
@@ -87,40 +91,40 @@ function ResponsiveAppBar() {
                 >
                   <Button
                     sx={{
-                      width: '100%',
-                      fontFamily: 'Montserrat',
-                      fontWeight: 'light',
-                      color: 'inherit',
-                      '&:hover': {
-                        backgroundColor: 'lightGray',
-                        color: 'black',
-                        transition: 'background-color 0.25s ease-in-out',
+                      width: "100%",
+                      fontFamily: "Montserrat",
+                      fontWeight: "light",
+                      color: "inherit",
+                      "&:hover": {
+                        backgroundColor: "lightGray",
+                        color: "black",
+                        transition: "background-color 0.25s ease-in-out",
                       },
-                      '& .text-left': {
-                        textAlign: 'left',
-                        width: '100%',
-                      }
+                      "& .text-left": {
+                        textAlign: "left",
+                        width: "100%",
+                      },
                     }}
                   >
-                    <div className="text-left">
-                      {page[0]}
-                    </div>
+                    <div className="text-left">{page[0]}</div>
                   </Button>
                 </Link>
               ))}
             </Menu>
           </Box>
-          <Box sx={{
-            flexGrow: 1,
-            display: { xs: 'none', md: 'flex' },
-            justifyContent: 'center',
-          }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+            }}
+          >
             {pages.map((page) => (
               <Link
                 style={{
-                  textDecoration: 'none',
-                  color: 'white',
-                  display: 'block',
+                  textDecoration: "none",
+                  color: "white",
+                  display: "block",
                   marginLeft: 10,
                   marginRight: 10,
                 }}
@@ -129,13 +133,13 @@ function ResponsiveAppBar() {
               >
                 <Button
                   sx={{
-                    fontFamily: 'Montserrat',
-                    fontWeight: '300',
-                    fontSize: '1rem',
-                    color: 'inherit',
-                    '&:hover': {
-                      color: 'lightGray',
-                      transition: 'background-color 2.0s ease-in-out',
+                    fontFamily: "Montserrat",
+                    fontWeight: "300",
+                    fontSize: "1rem",
+                    color: "inherit",
+                    "&:hover": {
+                      color: "lightGray",
+                      transition: "background-color 2.0s ease-in-out",
                     },
                   }}
                 >
