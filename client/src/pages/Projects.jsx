@@ -7,6 +7,7 @@ import MosaicImage from "../assets/mosaic.jpg";
 import VacBaseImage from "../assets/vacbase.png";
 import AironImage from "../assets/airon.png";
 import RacketImage from "../assets/racket.png";
+import PortfolioImage from "../assets/portfolio.png";
 
 const styles = {
   root: {
@@ -111,6 +112,13 @@ export default function Projects() {
       link: "https://github.com/d-x-s/airon-fitness",
       projectImage: AironImage,
       techStack: "React.js, Node.js, Express.js",
+    },
+    {
+      title: "Personal Website",
+      description: "You're looking right at it.",
+      link: "https://github.com/d-x-s/portfolio",
+      projectImage: PortfolioImage,
+      techStack: "React.js, Material UI",
     },
     {
       title: "x86 Compiler",
