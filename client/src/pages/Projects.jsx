@@ -145,6 +145,7 @@ export default function Projects() {
   return (
     <Box
       sx={{
+        height: '100%',
         opacity: loaded ? 1 : 0,
         transition: 'opacity 0.5s ease-in-out',
       }}

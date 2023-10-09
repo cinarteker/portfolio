@@ -137,6 +137,7 @@ export default function Blog() {
             sx={{
                 opacity: loaded ? 1 : 0,
                 transition: 'opacity 0.5s ease-in-out',
+                height: '100%',
             }}
         >
             <Box sx={PageStyle}>
