@@ -111,7 +111,7 @@ export default function Projects() {
       description: "AI-powered personal trainer.",
       link: "https://github.com/d-x-s/airon-fitness",
       projectImage: AironImage,
-      techStack: "React.js, Node.js, Express.js",
+      techStack: "OpenAI, React.js, Express.js",
     },
     {
       title: "Personal Website",
