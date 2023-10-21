@@ -66,31 +66,25 @@ function BlogEntry({ entry }) {
       <Typography fontFamily="Montserrat" fontWeight="Light" variant="body1">
         <NewlineText text={entry.content} />
       </Typography>
-
       <Box
         sx={{
           display: "flex",
           gap: "20px",
         }}
       >
-        <Link
-          sx={{
-            color: "white",
-          }}
-          target="_blank"
-          href="https://drive.google.com/file/d/1NtzO9vq_J-gW_s0an9hCtSbERftMsEV9/view?usp=sharing"
-        >
-          English Translation
-        </Link>
-        <Link
-          sx={{
-            color: "white",
-          }}
-          target="_blank"
-          href="https://asia.ubc.ca/news/2022-japanese-language-program-writing-contest/"
-        >
-          Journal Article
-        </Link>
+        {entry.links &&
+          entry.links.map((link) => (
+            <Link
+              key={link.id}
+              sx={{
+                color: "white",
+              }}
+              target="_blank"
+              href={link.url}
+            >
+              {link.displayText}
+            </Link>
+          ))}
       </Box>
     </Box>
   );

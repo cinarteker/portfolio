@@ -1,4 +1,5 @@
 import KouyouBanner from "../../assets/kouyoubanner.jpg";
+import ElfinLakes from "../../assets/elfin.png";
 
 const blogEntries = [
   {
@@ -28,9 +29,32 @@ const blogEntries = [
               すぐに紅葉も倒れこんでしまいました。翌日、二人の体から紅葉の焼けたドレスのような赤い苗木が生えました。
 
               だから毎年秋、雨が降る時、紅葉と炎の思い出のために木々が赤く色づきます。
-
             `,
     image: KouyouBanner,
+    links: [
+      {
+        id: "1_translation",
+        url: "https://drive.google.com/file/d/1NtzO9vq_J-gW_s0an9hCtSbERftMsEV9/view?usp=sharing",
+        displayText: "English Translation",
+      },
+      {
+        id: "1_article",
+        url: "https://asia.ubc.ca/news/2022-japanese-language-program-writing-contest/",
+        displayText: "Journal Article",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Elfin Lakes",
+    description:
+      "07 / 08 / 22 | Beautiful alpine lakes reflect Mount Garibaldi in the background.",
+    content: `Went to Elfin Lakes again this summer— a tradition I've kept for years now. 
+              It's just something about that place; the clear waters and the calm surroundings are a nice break. 
+              Every time I go, even though it's the same spot, it feels different in subtle ways. 
+              Whether it's the way the light hits the water or the new bird calls I notice. It's a familiar but refreshing getaway.
+            `,
+    image: ElfinLakes,
   },
 ];
 
