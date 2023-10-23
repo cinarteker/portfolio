@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import Blog from "./pages/Blog";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
+import Wave from "./pages/Wave";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/wave",
+        element: <Wave />,
       },
     ],
   },
