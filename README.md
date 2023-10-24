@@ -22,4 +22,5 @@ Welcome to my portfolio website! Check out my roadmap below— I have a lot more
     - [ ] MongoDB database for logging
     - [ ] API endpoints to POST and GET bulletin data
   - [x] Three.JS wave generated with math, as a dynamic background
+    - [ ] Amplitude and frequency control 
   - [ ] E-mail contact form
