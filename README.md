@@ -1,10 +1,7 @@
 # Davis' Portfolio Website
 
-Welcome to the code of my portfolio website!
-For the time being, you are looking at my website prototype which may or may not be spaghetti-coded. 
-
-I'm looking to incorporate some 3D graphics via Three.JS in the website and explore the power of mathematical programming.
-It's coming soon, so bear with me!
+Welcome to my portfolio website! Check out my roadmap below— I have a lot more cool features in the works! 
+![image](https://github.com/d-x-s/portfolio/assets/68035358/3a69d716-98d2-46a5-a013-58c77ec867cc)
 
 ## Roadmap
 - Essentials
@@ -24,5 +21,5 @@ It's coming soon, so bear with me!
     - [ ] AI semantic filtering for profanity
     - [ ] MongoDB database for logging
     - [ ] API endpoints to POST and GET bulletin data
-  - [ ] Three.JS wave generated with math, as a dynamic background
+  - [x] Three.JS wave generated with math, as a dynamic background
   - [ ] E-mail contact form
