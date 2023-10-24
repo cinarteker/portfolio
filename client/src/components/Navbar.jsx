@@ -13,7 +13,6 @@ const pages = [
   ["ABOUT", ""],
   ["PROJECTS", "projects"],
   ["BLOG", "blog"],
-  ["WAVE", "wave"],
 ];
 
 function ResponsiveAppBar() {

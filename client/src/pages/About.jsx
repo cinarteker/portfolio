@@ -6,7 +6,6 @@ import CheckIcon from "@mui/icons-material/Check";
 import EmailIcon from "@mui/icons-material/Email";
 import React, { useState, useEffect } from "react";
 import Wave from "./Wave";
-// import PageStyle from "../style/PageStyles";
 
 export default function About() {
   const [isCopied, setIsCopied] = useState(false);
@@ -34,7 +33,7 @@ export default function About() {
   return (
     <Box
       sx={{
-        position: "relative", // Add this line
+        position: "relative",
         opacity: loaded ? 1 : 0,
         transition: "opacity 0.5s ease-in-out",
         height: "100%",
@@ -44,8 +43,8 @@ export default function About() {
         {/* Hero Section */}
         <Box
           sx={{
-            position: "relative", // Add this line
-            zIndex: 2, // Add this line to ensure it's above the Wave component
+            position: "relative",
+            zIndex: 2,
 
             display: "flex",
             flexDirection: "column",
