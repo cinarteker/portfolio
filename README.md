@@ -3,7 +3,7 @@
 Welcome to the code of my portfolio website!
 For the time being, you are looking at my website prototype which may or may not be spaghetti-coded. 
 
-I'm looking to incorporate some 3D graphics via Three.JS in the website and explore the power of mathematical programming.
+I'm looking to incorporate some 3D graphics via Three.JS in the website and explore the power of mathematical programming [COMPLETE!].
 It's coming soon, so bear with me!
 
 ## Roadmap
@@ -24,5 +24,5 @@ It's coming soon, so bear with me!
     - [ ] AI semantic filtering for profanity
     - [ ] MongoDB database for logging
     - [ ] API endpoints to POST and GET bulletin data
-  - [ ] Three.JS wave generated with math, as a dynamic background
+  - [x] Three.JS wave generated with math, as a dynamic background
   - [ ] E-mail contact form
