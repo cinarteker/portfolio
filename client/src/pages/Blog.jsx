@@ -4,7 +4,7 @@ import blogEntries from "../data/blog/blogEntries";
 
 const ContainerStyle = {
   backgroundColor: "black",
-  paddingTop: "5",
+  paddingBottom: "50px",
   fontFamily: "Montserrat",
   display: "flex",
   flexDirection: "column",
@@ -102,7 +102,6 @@ export default function Blog() {
         opacity: loaded ? 1 : 0,
         transition: "opacity 0.5s ease-in-out",
         height: "100%",
-        paddingBottom: "40px",
       }}
     >
       <Box>

@@ -20,9 +20,7 @@ function App() {
       }}
     >
       <ResponsiveAppBar />
-      <Box sx={{ marginTop: "100px" }}>
-        <Outlet />
-      </Box>
+      <Outlet />
     </Box>
   );
 }
