@@ -1,6 +1,5 @@
 import { Box } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import PageStyle from "../style/PageStyles";
 import softwareProjects from "../data/projects/projects";
 import ProjectCard from "../components/projects/ProjectCard";
 
@@ -19,7 +18,16 @@ export default function Projects() {
         transition: "opacity 0.5s ease-in-out",
       }}
     >
-      <Box sx={PageStyle}>
+      <Box
+        sx={{
+          // backgroundColor: "#000000",
+          // height: "100%",
+          // overflowY: "hidden",
+          overflowX: "hidden",
+          // marginBottom: "500px",
+          display: "flex",
+        }}
+      >
         <Box
           sx={{
             width: "90vw",
@@ -31,7 +39,6 @@ export default function Projects() {
             display: "flex",
             gap: "2vw",
             justifyContent: "center",
-            maxHeight: "2000px",
             backgroundColor: "black",
           }}
         >

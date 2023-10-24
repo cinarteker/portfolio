@@ -14,6 +14,7 @@ Welcome to my portfolio website! Check out my roadmap below— I have a lot more
   - [ ] Contact page
 - Mindful UI
   - [x] Responsiveness for mobile users
+    - [ ] Sidebar navigation for mobile users
   - [x] Styled with Web Content Accessibility Guidelines (WCAG) 2.0 in mind
 - Features
   - [ ] A map bulletin board for people to leave messages for me
