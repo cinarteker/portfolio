@@ -1,8 +1,31 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
+import { Box, Slider, Typography } from "@mui/material";
 
 function Wave() {
   const mountRef = useRef(null);
+
+  const [tick, setTick] = useState(0.001);
+  const tickRef = useRef(tick);
+
+  const [amplitude, setAmplitude] = useState(3000);
+  const amplitudeRef = useRef(amplitude);
+
+  useEffect(() => {
+    tickRef.current = tick;
+  }, [tick]);
+
+  useEffect(() => {
+    amplitudeRef.current = amplitude;
+  }, [amplitude]);
+
+  const handleFrequencyChange = (event, newValue) => {
+    setTick(newValue);
+  };
+
+  const handleAmplitudeChange = (event, newValue) => {
+    setAmplitude(newValue);
+  };
 
   useEffect(() => {
     const planeDefinition = 100;
@@ -50,6 +73,7 @@ function Wave() {
     rendererDom.style.top = "0";
     rendererDom.style.zIndex = "1";
     rendererDom.style.width = "100%";
+    rendererDom.style.height = "100%";
 
     let count = 0;
     function render() {
@@ -74,13 +98,13 @@ function Wave() {
         positions[index] =
           Math.sin((px / 1000 + count) * 5) *
             Math.cos((py / 1000 + count) * 5) *
-            2500 +
+            amplitudeRef.current +
           Math.sin((px / 500 - count) * 5) *
             Math.cos((py / 500 - count) * 5) *
-            2500;
+            amplitudeRef.current;
       }
 
-      count += 0.001;
+      count += tickRef.current;
       planeGeo.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
     }
@@ -90,7 +114,61 @@ function Wave() {
     mountRef.current.appendChild(renderer.domElement);
   }, []);
 
-  return <div ref={mountRef} />;
+  return (
+    <Box>
+      <Box ref={mountRef} />
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "30px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: "999",
+          display: "flex",
+          alignItems: "center",
+          color: "white",
+        }}
+      >
+        <Typography variant="body2" sx={{ mr: 1 }}>
+          Frequency
+        </Typography>
+        <Slider
+          size="small"
+          min={0}
+          max={0.01}
+          step={0.0001}
+          value={tick}
+          onChange={handleFrequencyChange}
+          sx={{ color: "grey", width: 200 }}
+        />
+      </Box>
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: "60px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          zIndex: "999",
+          display: "flex",
+          alignItems: "center",
+          color: "white",
+        }}
+      >
+        <Typography variant="body2" sx={{ mr: 1 }}>
+          Amplitude
+        </Typography>
+        <Slider
+          size="small"
+          min={0}
+          max={10000}
+          step={100}
+          value={amplitude}
+          onChange={handleAmplitudeChange}
+          sx={{ color: "grey", width: 200 }}
+        />
+      </Box>
+    </Box>
+  );
 }
 
 export default Wave;
