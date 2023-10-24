@@ -45,6 +45,12 @@ function Wave() {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setClearColor(background, 1);
 
+    const rendererDom = renderer.domElement;
+    rendererDom.style.position = "absolute";
+    rendererDom.style.top = "0";
+    rendererDom.style.zIndex = "1";
+    rendererDom.style.width = "100%";
+
     let count = 0;
     function render() {
       requestAnimationFrame(render);

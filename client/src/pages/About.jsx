@@ -5,7 +5,8 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CheckIcon from "@mui/icons-material/Check";
 import EmailIcon from "@mui/icons-material/Email";
 import React, { useState, useEffect } from "react";
-import PageStyle from "../style/PageStyles";
+import Wave from "./Wave";
+// import PageStyle from "../style/PageStyles";
 
 export default function About() {
   const [isCopied, setIsCopied] = useState(false);
@@ -33,15 +34,19 @@ export default function About() {
   return (
     <Box
       sx={{
+        position: "relative", // Add this line
         opacity: loaded ? 1 : 0,
         transition: "opacity 0.5s ease-in-out",
         height: "100%",
       }}
     >
-      <Box sx={PageStyle}>
+      <Box>
         {/* Hero Section */}
         <Box
           sx={{
+            position: "relative", // Add this line
+            zIndex: 2, // Add this line to ensure it's above the Wave component
+
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
@@ -220,6 +225,7 @@ export default function About() {
           </Box>
         </Box>
       </Box>
+      <Wave />
     </Box>
   );
 }
