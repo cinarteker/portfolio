@@ -1,6 +1,5 @@
 import { Link, Box, Typography } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import PageStyle from "../style/PageStyles";
 import blogEntries from "../data/blog/blogEntries";
 
 const ContainerStyle = {
@@ -103,9 +102,10 @@ export default function Blog() {
         opacity: loaded ? 1 : 0,
         transition: "opacity 0.5s ease-in-out",
         height: "100%",
+        paddingBottom: "40px",
       }}
     >
-      <Box sx={PageStyle}>
+      <Box>
         <Box sx={ContainerStyle}>
           {blogEntries.map((entry) => (
             <BlogEntry key={entry.id} entry={entry} />
