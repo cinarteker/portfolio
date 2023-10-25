@@ -84,6 +84,7 @@ function Wave() {
 
     const renderer = new THREE.WebGLRenderer({ alpha: false });
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio); // Improves resolution for high-pixel density displays
     renderer.setClearColor(background, 1);
 
     const rendererDom = renderer.domElement;
