@@ -153,7 +153,6 @@ function Wave() {
       >
         <TuneIcon />
       </IconButton>
-
       <Popover
         open={open}
         anchorEl={anchorEl}
