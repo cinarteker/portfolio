@@ -91,8 +91,9 @@ export default function About() {
                   strings: [
                     `I'm a developer.`,
                     `I'm a designer.`,
-                    `I'm a photographer.`,
-                    `I'm a writer.`,
+                    `I'm a programmer.`,
+                    `Enjoy the waves?`,
+                    `Get in touch!`,
                   ],
                   autoStart: true,
                   loop: true,
