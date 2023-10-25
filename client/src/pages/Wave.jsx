@@ -1,32 +1,50 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
-import { Box, Slider, Typography } from "@mui/material";
+import { IconButton, Popover, Box, Slider, Typography } from "@mui/material";
+import TuneIcon from "@mui/icons-material/Tune";
 
 function Wave() {
+  // renderer canvas mount
   const mountRef = useRef(null);
 
+  // wave frequency control
   const [tick, setTick] = useState(0.001);
   const tickRef = useRef(tick);
-
-  const [amplitude, setAmplitude] = useState(3000);
-  const amplitudeRef = useRef(amplitude);
 
   useEffect(() => {
     tickRef.current = tick;
   }, [tick]);
 
-  useEffect(() => {
-    amplitudeRef.current = amplitude;
-  }, [amplitude]);
-
   const handleFrequencyChange = (event, newValue) => {
     setTick(newValue);
   };
+
+  // wave amplitude control
+  const [amplitude, setAmplitude] = useState(3000);
+  const amplitudeRef = useRef(amplitude);
+
+  useEffect(() => {
+    amplitudeRef.current = amplitude;
+  }, [amplitude]);
 
   const handleAmplitudeChange = (event, newValue) => {
     setAmplitude(newValue);
   };
 
+  // wave parameter slider
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+
+  // wave calculation and rendering
   useEffect(() => {
     const planeDefinition = 100;
     const planeSize = 1245000;
@@ -117,7 +135,11 @@ function Wave() {
   return (
     <Box>
       <Box ref={mountRef} />
-      <Box
+
+      <IconButton
+        color="primary"
+        aria-label="settings"
+        onClick={handlePopoverOpen}
         sx={{
           position: "absolute",
           bottom: "30px",
@@ -129,44 +151,73 @@ function Wave() {
           color: "white",
         }}
       >
-        <Typography variant="body2" sx={{ mr: 1 }}>
-          Frequency
-        </Typography>
-        <Slider
-          size="small"
-          min={0}
-          max={0.01}
-          step={0.0001}
-          value={tick}
-          onChange={handleFrequencyChange}
-          sx={{ color: "grey", width: 200 }}
-        />
-      </Box>
-      <Box
+        <TuneIcon />
+      </IconButton>
+
+      <Popover
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handlePopoverClose}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "center",
+        }}
+        transformOrigin={{
+          vertical: "bottom",
+          horizontal: "center",
+        }}
         sx={{
-          position: "absolute",
-          bottom: "60px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          zIndex: "999",
-          display: "flex",
-          alignItems: "center",
-          color: "white",
+          ".MuiPaper-root": {
+            background: "rgba(0, 0, 0, 0.8)",
+            padding: "10px",
+          },
         }}
       >
-        <Typography variant="body2" sx={{ mr: 1 }}>
-          Amplitude
-        </Typography>
-        <Slider
-          size="small"
-          min={0}
-          max={10000}
-          step={100}
-          value={amplitude}
-          onChange={handleAmplitudeChange}
-          sx={{ color: "grey", width: 200 }}
-        />
-      </Box>
+        {/* Frequency Slider */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            color: "white",
+            mb: 1,
+          }}
+        >
+          <Typography variant="body2" sx={{ mr: 1 }}>
+            Frequency
+          </Typography>
+          <Slider
+            size="small"
+            min={0}
+            max={0.01}
+            step={0.0001}
+            value={tick}
+            onChange={handleFrequencyChange}
+            sx={{ color: "grey", width: 200 }}
+          />
+        </Box>
+
+        {/* Amplitude Slider */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            color: "white",
+          }}
+        >
+          <Typography variant="body2" sx={{ mr: 1 }}>
+            Amplitude
+          </Typography>
+          <Slider
+            size="small"
+            min={0}
+            max={10000}
+            step={100}
+            value={amplitude}
+            onChange={handleAmplitudeChange}
+            sx={{ color: "grey", width: 200 }}
+          />
+        </Box>
+      </Popover>
     </Box>
   );
 }
