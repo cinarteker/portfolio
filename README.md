@@ -1,7 +1,7 @@
 # Davis' Portfolio Website
 
 Welcome to my portfolio website! Check out my roadmap below— I have a lot more cool features in the works! 
-![image](https://github.com/d-x-s/portfolio/assets/68035358/3a69d716-98d2-46a5-a013-58c77ec867cc)
+![PortfolioPreview](https://github.com/d-x-s/portfolio/assets/68035358/31fbdb9e-15a0-4f9a-a5cb-e18b8b9634f2)
 
 ## Technical Debt
 - [ ] Migrate independent component styles to unified theme
