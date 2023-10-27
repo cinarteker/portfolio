@@ -49,7 +49,8 @@ export default function About() {
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-            padding: "100px",
+            paddingX: "5vw",
+            paddingY: "8vh",
             color: "white",
 
             fontSize: "5rem",
