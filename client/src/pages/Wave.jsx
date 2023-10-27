@@ -46,7 +46,7 @@ function Wave() {
 
   // wave calculation and rendering
   useEffect(() => {
-    const planeDefinition = 100;
+    const planeDefinition = 200;
     const planeSize = 1245000;
     const background = "black";
     const meshColor = "grey";
