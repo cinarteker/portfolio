@@ -76,7 +76,13 @@ function BlogEntry({ entry }) {
             <Link
               key={link.id}
               sx={{
+                position: "relative",
                 color: "white",
+                textDecorationColor: "white",
+                transition: "color 0.25s ease-in-out",
+                "&:hover": {
+                  color: "gray",
+                },
               }}
               target="_blank"
               href={link.url}
