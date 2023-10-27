@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import * as THREE from "three";
 import { IconButton, Popover, Box, Slider, Typography } from "@mui/material";
-import TuneIcon from "@mui/icons-material/Tune";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 function Wave() {
   // renderer canvas mount
@@ -87,17 +87,11 @@ function Wave() {
     renderer.setPixelRatio(window.devicePixelRatio); // Improves resolution for high-pixel density displays
     renderer.setClearColor(background, 1);
 
-    const rendererDom = renderer.domElement;
-    rendererDom.style.position = "absolute";
-    rendererDom.style.top = "0";
-    rendererDom.style.zIndex = "1";
-    rendererDom.style.width = "100%";
-    rendererDom.style.height = "100%";
-
     let count = 0;
     function render() {
       requestAnimationFrame(render);
 
+      // rotate camera about the plane
       const { x, y, z } = camera.position;
       const rotationSpeed = 0.0005;
       camera.position.x =
@@ -107,7 +101,8 @@ function Wave() {
       camera.position.y = y;
       camera.lookAt(new THREE.Vector3(0, 10000, 0));
 
-      const positions = planeGeo.attributes.position.array;
+      // wave simulation
+      const positions = planeGeo.attributes.position.array; // a flattened array of coordinates
       const length = positions.length / 3; // Each vertex has x, y, and z components
 
       for (let i = 0; i < length; i += 1) {
@@ -123,12 +118,22 @@ function Wave() {
             amplitudeRef.current;
       }
 
+      // increment time and render wave
       count += tickRef.current;
       planeGeo.attributes.position.needsUpdate = true;
       renderer.render(scene, camera);
     }
 
     render();
+
+    // window positioning and mounting
+    const rendererDom = renderer.domElement;
+    rendererDom.style.position = "absolute";
+    rendererDom.style.top = "0";
+    rendererDom.style.zIndex = "1";
+    rendererDom.style.width = "100%";
+    rendererDom.style.height = "100%";
+
     mountRef.current.innerHTML = "";
     mountRef.current.appendChild(renderer.domElement);
   }, []);
@@ -136,7 +141,6 @@ function Wave() {
   return (
     <Box>
       <Box ref={mountRef} />
-
       <IconButton
         color="primary"
         aria-label="settings"
@@ -149,10 +153,15 @@ function Wave() {
           zIndex: "999",
           display: "flex",
           alignItems: "center",
-          color: "white",
+          color: "black",
+          backgroundColor: "lightGray",
+          transition: "background-color 0.25s ease-in-out",
+          "&:hover": {
+            backgroundColor: "gray",
+          },
         }}
       >
-        <TuneIcon />
+        <SettingsIcon />
       </IconButton>
       <Popover
         open={open}
@@ -182,7 +191,14 @@ function Wave() {
             mb: 1,
           }}
         >
-          <Typography variant="body2" sx={{ mr: 1 }}>
+          <Typography
+            sx={{
+              mr: 1,
+              fontFamily: "Montserrat",
+              fontWeight: "300",
+              fontSize: "1rem",
+            }}
+          >
             Frequency
           </Typography>
           <Slider
@@ -195,7 +211,6 @@ function Wave() {
             sx={{ color: "grey", width: 200 }}
           />
         </Box>
-
         {/* Amplitude Slider */}
         <Box
           sx={{
@@ -204,7 +219,14 @@ function Wave() {
             color: "white",
           }}
         >
-          <Typography variant="body2" sx={{ mr: 1 }}>
+          <Typography
+            sx={{
+              mr: 1,
+              fontFamily: "Montserrat",
+              fontWeight: "300",
+              fontSize: "1rem",
+            }}
+          >
             Amplitude
           </Typography>
           <Slider
