@@ -1,21 +1,21 @@
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, Popover } from "@mui/material";
 import TypewriterComponent from "typewriter-effect";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import CheckIcon from "@mui/icons-material/Check";
 import EmailIcon from "@mui/icons-material/Email";
 import React, { useState, useEffect } from "react";
 import Wave from "./Wave";
 
 export default function About() {
-  const [isCopied, setIsCopied] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [popoverOpen, setPopoverOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
 
   useEffect(() => {
     setLoaded(true);
   }, []);
 
-  const copyEmailToClipboard = () => {
+  const copyEmailToClipboard = (event) => {
     const el = document.createElement("textarea");
     el.value = "davissong01@gmail.com";
     document.body.appendChild(el);
@@ -23,11 +23,12 @@ export default function About() {
     document.execCommand("copy");
     document.body.removeChild(el);
 
-    setIsCopied(true);
+    setAnchorEl(event.currentTarget);
+    setPopoverOpen(true);
 
     setTimeout(() => {
-      setIsCopied(false);
-    }, 3000);
+      setPopoverOpen(false);
+    }, 1500);
   };
 
   return (
@@ -173,37 +174,6 @@ export default function About() {
                 }}
               />
             </IconButton>
-            {isCopied ? (
-              <IconButton>
-                <CheckIcon
-                  sx={{
-                    transition: "opacity 0.5s",
-                    fontSize: "50px",
-                    color: "green",
-                    "@media (max-width: 600px)": {
-                      fontSize: "25px",
-                    },
-                  }}
-                />
-              </IconButton>
-            ) : (
-              <IconButton onClick={copyEmailToClipboard}>
-                <EmailIcon
-                  sx={{
-                    fontSize: "50px",
-                    color: "white",
-                    transition: "color 0.25s ease-in-out",
-                    "&:hover": {
-                      color: "#FF6961",
-                    },
-                    "@media (max-width: 600px)": {
-                      fontSize: "25px",
-                    },
-                  }}
-                />
-              </IconButton>
-            )}
-
             <IconButton
               href="https://www.linkedin.com/in/davissong/"
               target="_blank"
@@ -223,8 +193,56 @@ export default function About() {
                 }}
               />
             </IconButton>
+            <IconButton onClick={(event) => copyEmailToClipboard(event)}>
+              <EmailIcon
+                sx={{
+                  fontSize: "50px",
+                  color: "white",
+                  transition: "color 0.25s ease-in-out",
+                  "&:hover": {
+                    color: "#FF6961",
+                  },
+                  "@media (max-width: 600px)": {
+                    fontSize: "25px",
+                  },
+                }}
+              />
+            </IconButton>
           </Box>
         </Box>
+        <Popover
+          open={popoverOpen}
+          anchorEl={anchorEl}
+          onClose={() => setPopoverOpen(false)}
+          anchorOrigin={{
+            vertical: "right",
+            horizontal: "right",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "left",
+          }}
+          sx={{
+            ".MuiPaper-root": {
+              fontSize: "1rem",
+              fontWeight: "inherit",
+              fontFamily: "Montserrat",
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+            },
+          }}
+        >
+          <Typography
+            sx={{
+              p: 2,
+              fontFamily: "inherit",
+              fontSize: "inherit",
+              fontWeight: "inherit",
+            }}
+          >
+            Email copied to clipboard.
+          </Typography>
+        </Popover>
       </Box>
       <Wave />
     </Box>
