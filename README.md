@@ -12,12 +12,13 @@ Welcome to my portfolio website! Check out my roadmap below— I have a lot more
   - [x] Projects page
   - [x] Blog page
   - [ ] Contact page
+  - [ ] Work experience page
 - Mindful UI
   - [x] Responsiveness for mobile users
     - [ ] Sidebar navigation for mobile users
   - [x] Styled with Web Content Accessibility Guidelines (WCAG) 2.0 in mind
 - Features
-  - [ ] A map bulletin board for people to leave messages for me
+  - [ ] A 3D map bulletin board for people to leave messages for me
     - [ ] Regex filtering for profanity
     - [ ] AI semantic filtering for profanity
     - [ ] MongoDB database for logging
