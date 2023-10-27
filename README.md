@@ -3,6 +3,11 @@
 Welcome to my portfolio website! Check out my roadmap below— I have a lot more cool features in the works! 
 ![image](https://github.com/d-x-s/portfolio/assets/68035358/3a69d716-98d2-46a5-a013-58c77ec867cc)
 
+## Technical Debt
+- [ ] Migrate independent component styles to unified theme
+- [ ] Console errors due to nested divs
+- [ ] Elements should be refactored into components instead of courses
+
 ## Roadmap
 - Essentials
   - [x] Navigation bar
@@ -26,3 +31,4 @@ Welcome to my portfolio website! Check out my roadmap below— I have a lot more
   - [x] Three.JS wave generated with math, as a dynamic background
     - [x] Amplitude and frequency control 
   - [ ] E-mail contact form
+  - [ ] Update link preview
